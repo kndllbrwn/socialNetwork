@@ -7,9 +7,9 @@ AccountsTemplates.configure({
       signUp: 'Join the Social Network'
     }
   },
-  onSubmitHook: () => { FlowRouter.go('home')},
-  onLogoutHook: () => { FlowRouter.go('home')}
-})
+  onSubmitHook: () => { FlowRouter.go('home'); },
+  onLogoutHook: () => { FlowRouter.go('home'); }
+});
 
 /**
  * Helper function to generate an array of objects, like
@@ -53,8 +53,8 @@ AccountsTemplates.addFields([
     required: true,
     displayName: 'Gender',
     select: [
-      { text: 'Male', value: 'male'},
-      { text: 'Female', value: 'female'}
+      { text: 'Male', value: 'male' },
+      { text: 'Female', value: 'female' }
     ]
   },
   {
@@ -62,20 +62,20 @@ AccountsTemplates.addFields([
     type: 'select',
     required: true,
     displayName: 'Day of birth',
-    select: generateDates(1,31)
+    select: generateDates(1, 31)
   },
   {
     _id: 'monthOfBirth',
     type: 'select',
     required: true,
     displayName: 'Month of birth',
-    select: generateDates(1,12)
+    select: generateDates(1, 12)
   },
   {
     _id: 'yearOfBirth',
     type: 'select',
     required: true,
     displayName: 'Year of birth',
-    select: generateDates(1980,1998)
+    select: generateDates(1980, 1998)
   }
-])
+]);
